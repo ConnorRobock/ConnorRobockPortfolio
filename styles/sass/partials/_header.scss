@@ -1,0 +1,16 @@
+header {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url("../assets/markus-spiske-FXFz-sW0uwo-unsplash.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}

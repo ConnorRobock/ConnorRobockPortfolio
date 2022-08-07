@@ -1,0 +1,12 @@
+// Nav styles
+
+nav, ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+}
+
+ul {
+    width: 50%;
+}

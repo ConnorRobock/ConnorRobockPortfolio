@@ -1,5 +1,25 @@
+// Base styles
+
 .wrapper {
     width: 90%;
     max-width: 1300px;
     margin: 0 auto;
 }
+
+body {
+    background-color: $dark-bg-color;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.flexContainer {
+    display: flex;
+}
+

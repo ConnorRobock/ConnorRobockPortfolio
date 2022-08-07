@@ -16,12 +16,18 @@
     <title>Connor's Portfolio</title>
 </head>
 
+<!-- HTML structure -->
+
 <body>
     <main>
+        <!-- logo -->
         <nav class="wrapper">
             <div class="logo" id="home">
-                CRobock
+                <p>C Robock</p>
             </div>
+
+            <!-- top nav w/ links-->
+
             <ul class="flexContainer">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
@@ -29,80 +35,104 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <header class="wrapper">
-            <h1>
-                <span>Connor Robock</span>
-                <span>Front End</span>
-                <span>Web Developer</span>
-            </h1>
+
+        <!-- Header with intro will use animation with H1 -->
+        <header>
+            <div class="wrapper">
+                <h1>
+                    <span class="name">Connor Robock</span><br>
+                    <span>Front End</span><br>
+                    <span>Web Developer</span>
+                </h1>
+            </div>
         </header>
+
+        <!-- main content -->
+
         <body>
+
+            <!-- about me section -->
+
             <section class="aboutMe" id="aboutMe">
-                <div class="wrapper, flexContainer">
+                <div class="wrapper">
                     <h2>About Me</h2>
                     <div class="flexContainer">
-                        <img src="http://placekitten.com/200/300" alt="Headshot of Connor Robock">
+                        <img src="http://placekitten.com/100/100" alt="Headshot of Connor Robock">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, optio repellat! Dicta, ullam aliquam incidunt rerum exercitationem id doloremque iusto fuga ipsa ea excepturi nam, nostrum, eveniet debitis accusantium tempore porro officia obcaecati laboriosam odit. Quisquam dolorem culpa rem temporibus. Quis iusto cum autem! In dolores quis quae at obcaecati.</p>
                     </div>
+                        <div class="contact">
+                            <div>
+                            <h3>Email:</h3>
+                            <email>Crbock07@gmail.com</email>
+                            </div>
+                            <a href="#">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+
+                        </div>
+                    </div>
             </section>
+
+            <!-- skills icon section, using font awesome and devicon -->
             <section>
-                <div class="skills">
+                <div class="skills, wrapper">
                     <h2>Skills</h2>
                     <div class="flexContainer">
                         <div class="iconContainer">
                             <i class="fa-brands fa-html5"></i>
-                            <h3>HTML5</h3>
+                            <p>HTML5</p>
                         </div>
                         <div class="iconContainer">
                             <i class="fa-brands fa-square-js"></i>
-                            <h3>CSS</h3>
+                            <p>CSS</p>
                         </div>
                         <div class="iconContainer">
                             <i class="fa-brands fa-js"></i>
-                            <h3>JavaScript + ES6</h3>
+                            <p>JavaScript + ES6</p>
                         </div>
                         <div class="iconContainer">
                             <i class="fa-brands fa-sass"></i>
-                            <h3>Sass</h3>
+                            <p>Sass</p>
                         </div>
                         <div class="iconContainer">
                             <i class="fa-brands fa-react"></i>
-                            <h3>React</h3>
+                            <p>React</p>
                         </div>
                         <div class="iconContainer">
                             <i class="devicon-firebase-plain"></i>
-                            <h3>Firebase</h3>
+                            <p>Firebase</p>
                         </div>
                         <div class="iconContainer">
                             <i class="fa-brands fa-github"></i>
-                            <h3>Git</h3>
+                            <p>Git</p>
                         </div>
                         <div class="iconContainer">
                             <i class="fa-solid fa-terminal"></i>
-                            <h3>Terminal</h3>
+                            <p>Terminal</p>
                         </div>
                         <div class="iconContainer">
                             <i class="fa-solid fa-mobile-screen-button"></i>
-                            <h3>Responsive Design</h3>
+                            <p>Responsive Design</p>
                         </div>
                         <div class="iconContainer">
                             <i class="fa-solid fa-universal-access"></i>
-                            <h3>Accessibility</h3>
+                            <p>Accessibility</p>
                         </div>
                     </div>
                 </div>
             </section>
-                        
-                        
-                    </div>
-                </div>
-            </section>
+
+            <!-- portfolio section showing my work -->
 
             <section class="portfolio" id="portfolio">
                 <div class="wrapper, flexContainer">
                     <h2>Portfolio</h2>
                     <div class="flexContainer">
                         <img src="http://placekitten.com/200/300" alt="Image of Project 1">
+                        <h3>Project 1 - "Creative"</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, optio repellat! Dicta, ullam aliquam incidunt rerum exercitationem id doloremque iusto fuga ipsa ea excepturi nam, nostrum, eveniet debitis accusantium tempore porro officia obcaecati laboriosam odit. Quisquam dolorem culpa rem temporibus. Quis iusto cum autem! In dolores quis quae at obcaecati.</p>
                     </div>
                     <div class="flexContainer">
@@ -116,9 +146,36 @@
                     
                 </div>
             </section>
+
+            <!-- contact info -->
+
+            <section class="contact" id="contact">
+                <div class="wrapper">
+                    <h2>Contact Me</h2>
+                    <div>
+                        <h3>Email:</h3>
+                        <email>Crbock07@gmail.com</email>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+            </section>
         </body>
+
+        <footer>
+            <p>Designed by Connor Robock 2022</p>
+        </footer>
         
     </main>
     
 </body>
+
 </html>
