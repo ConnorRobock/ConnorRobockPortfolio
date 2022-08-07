@@ -1,19 +1,111 @@
 // About Me Section
 
-.aboutMe { 
-    margin-top: 150px;   
-    img {
-        width: 50%;
-        border-radius: 50%;
-    }
+.aboutMe {
+    margin-top: 150px;
 
-    h2 {
-        width: 50%;
+    .imgContainer, .textContainer {
+        width: calc( (100% / 2 ) - 50px) ;
+        padding: 25px;
+
+        img {
+            border-radius: 50%;
+        }
+        
+        }
+
+}
+
+// Skills Section
+
+.skills {
+    margin-top: 150px;
+
+    .flexContainer {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .iconContainer {
+            display: flex;
+            flex-direction: column;
+            width: calc((100%/5));
+    
+            i {
+                font-size: 5rem;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+    
+        }
+    }
+    
+}
+
+// Portfolio section
+
+.portfolio {
+    .flexContainer {
+        flex-direction: column;
+    }
+        .portfolioContainer {
+            display: flex;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+            .imgContainer, .textContainer{
+                width: calc( (100% / 2) - 50px );
+                padding: 0 25px 0 25px;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            .textContainer {
+                flex-direction: column;
+            }
+        
+}
+
+.portfolio img {
+    border: 5px solid $dark-primary-color;
+    border-radius: 5px;
+}
+
+// Contact Me Section
+
+.contact {
+    p, h3{
+        margin: 0;
+        font-size: 1.5rem;
         text-align: center;
     }
 
-    p{
-        width: 50%;
-    }    
+    .flexContainer {
+        flex-direction: column;
+
+        .contactContainer {
+            display: flex;
+            margin-top: 25px;
+
+            div, a {
+                width: calc( 100% / 3 );
+                text-align: center;
+            }
+
+        }
+
+    }
+
+    i {
+        font-size: 4rem;
+    }
+
+    h3 {
+        padding-bottom: 15px;
+    }
+
 }
 

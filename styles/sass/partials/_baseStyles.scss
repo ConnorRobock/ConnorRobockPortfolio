@@ -15,6 +15,12 @@ img {
     height: auto;
 }
 
+h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
 ul {
     list-style: none;
 }
@@ -22,4 +28,18 @@ ul {
 .flexContainer {
     display: flex;
 }
+
+.textContainer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMe, .skills, .portfolio, .contact {
+    margin-top: 100px;
+}
+
+
+
 
