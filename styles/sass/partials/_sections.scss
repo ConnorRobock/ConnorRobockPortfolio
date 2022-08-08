@@ -51,23 +51,41 @@
     .flexContainer {
         flex-direction: column;
     }
-        .portfolioContainer {
-            display: flex;
-            width: 100%;
-            margin-bottom: 50px;
+    .portfolioContainer {
+        display: flex;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .imgContainer, .textContainer{
+        width: calc( (100% / 2) - 50px );
+        padding: 0 25px 0 25px;
+
+        p {
+            margin: 0;
         }
-            .imgContainer, .textContainer{
-                width: calc( (100% / 2) - 50px );
-                padding: 0 25px 0 25px;
+    }
 
-                p {
-                    margin: 0;
-                }
-            }
+    .textContainer {
+        flex-direction: column;
+    }
 
-            .textContainer {
-                flex-direction: column;
+    .linkContainer {
+        padding: 25px;
+            a {
+                margin: 25px;
+                transition: 0.3s;
+                    &:hover, &:focus {
+                        color: $dark-theme-color;
+                        opacity: 80%;
+                    }
             }
+    }
+
+    .linkContainer .liveLink {
+        border: 2px solid $dark-theme-color;
+        border-radius: 5px;
+        padding: 5px;
+    }   
         
 }
 

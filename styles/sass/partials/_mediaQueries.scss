@@ -67,6 +67,8 @@
 
 }
 
+// queries at 650px
+
 @media (max-width: 650px) {
     .skills .flexContainer{
 
@@ -79,5 +81,15 @@
         
     }
 
+}
+
+// queries at 425px
+
+@media (max-width: 425px) {
+    .linkContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 

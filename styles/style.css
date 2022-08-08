@@ -482,6 +482,23 @@ header div {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.portfolio .linkContainer {
+  padding: 25px;
+}
+.portfolio .linkContainer a {
+  margin: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.portfolio .linkContainer a:hover, .portfolio .linkContainer a:focus {
+  color: #03a696;
+  opacity: 80%;
+}
+.portfolio .linkContainer .liveLink {
+  border: 2px solid #03a696;
+  border-radius: 5px;
+  padding: 5px;
+}
 
 .portfolio img {
   border: 5px solid #ffffff;
@@ -610,5 +627,19 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 33.3333333333%;
+  }
+}
+@media (max-width: 425px) {
+  .linkContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
