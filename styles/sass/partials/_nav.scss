@@ -1,12 +1,31 @@
 // Nav styles
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav, ul {
     display: flex;
     justify-content: space-between;
     align-content: center;
     text-align: center;
+
+    li {
+        margin: 0 25px 0 25px;
+    }
 }
 
-ul {
-    width: 50%;
+nav p {
+    margin: 0 auto;
+}
+
+nav li a {
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+            opacity: 80%;
+            color: $dark-theme-color;
+        }
 }

@@ -1,1 +1,8 @@
-// footer styles
+// Footer styles
+
+footer {
+    margin: 100px 0 25px 0;
+    text-align: center;
+    font-family: $primaryFont;
+    border-top: 2px solid $dark-secondry-color;
+}
