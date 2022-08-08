@@ -4,6 +4,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: $dark-bg-color;
+    z-index: 10;
 }
 
 nav, ul {
@@ -17,9 +21,9 @@ nav, ul {
     }
 }
 
-nav p {
-    margin: 0 auto;
-}
+// nav p {
+//     margin: 0 auto;
+// }
 
 nav li a {
     transition: 0.3s;
@@ -29,3 +33,30 @@ nav li a {
             color: $dark-theme-color;
         }
 }
+
+// .slideOutMenu {
+//     background-color: $dark-bg-color;
+//     position: relative;
+//     overflow: hidden;
+//     display: flex;
+//     flex-direction: column;
+
+//         li {
+//             margin: 20px;
+//         }  
+// }
+
+// .menuIcon {
+//     position: absolute;
+//     margin: 15px;
+//     left: 0;
+//     top: 0;
+//     transition: 0.3s;
+//         &:hover, &:focus {
+//             color: $dark-theme-color;
+//         }
+// }
+
+// .menuIcon, .slideOutMenu{
+//     display: none;
+// }
