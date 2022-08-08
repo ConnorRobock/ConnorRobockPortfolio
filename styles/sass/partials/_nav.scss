@@ -1,19 +1,5 @@
 // Nav styles
 
-// Skip Link
-.skipLink {
-    position: absolute;
-    left: -1000px;
-    top: 5px;
-    background-color: $secondary;
-    color: $footerTextColor;
-    z-index: 10;
-
-    &:focus {
-        left: 0;
-    }
-}
-
 nav {
     display: flex;
     align-items: center;
@@ -21,7 +7,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: $dark-bg-color;
-    z-index: 10;
+    z-index: 20;
 }
 
 nav, ul {
