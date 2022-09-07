@@ -427,6 +427,18 @@ header div {
   max-width: 600px;
   max-height: 600px;
 }
+.aboutMe .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 .skills {
   margin-top: 150px;
@@ -475,6 +487,12 @@ header div {
 }
 .portfolio .imgContainer p, .portfolio .textContainer p {
   margin: 0;
+}
+.portfolio .imgContainer img, .portfolio .textContainer img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 350px;
 }
 .portfolio .textContainer {
   -webkit-box-orient: vertical;
