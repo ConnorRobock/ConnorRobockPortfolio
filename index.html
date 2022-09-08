@@ -30,25 +30,27 @@
 
                 <!-- top nav w/ links-->
 
-                <ul class="flexContainer">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-
-                <!-- <div class="menuIcon">
-                    <i class="fa-solid fa-bars">
-                        <span class="sr-only">menu button</span>
-                    </i>
-                </div>
-
-                <ul class="slideOutMenu" id="slideOutMenu">
+                <!-- <ul class="flexContainer">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#aboutMe">About Me</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul> -->
+
+                <div onclick="openNav()" class="menuIcon">
+                    <i class="fa-solid fa-bars">
+                        <span class="sr-only">menu button</span>
+                    </i>
+                </div>
+
+                <div class="slideOutMenu" id="slideOutMenu">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#home">Home</a>
+                    <a href="#aboutMe">About Me</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
             </div>
         </nav>
 
@@ -178,7 +180,9 @@
                                 <li>Paired Programming</li>
                                 <li>GitHub</li>
                             </ul>
-                            <p>This website uses the MealDB API to allow users to search for recipes including a certain ingredient based on the users input while also allowing users to search for a random recipe from the API. This was a paired project completed with Akalpit Sharma</p>
+                            <p>This website uses the MealDB API to allow users to search for recipes including a certain ingredient based on the users input while also allowing users to search for a random recipe from the API. This was a paired project completed with 
+                            <a class="partners" href="https://akalpit.netlify.app/"> Akalpit Sharma</a>.
+                            </p>
                             <div class="linkContainer">
                                 <a href="https://github.com/findMeAMealApp/Project2-FindMeAMeal.git">
                                         <i class="fa-brands fa-github"></i><span class="sr-only">Find Me A Meal App Git Hub Link</span>
@@ -195,7 +199,7 @@
                         </div>
                         <div class="textContainer">
                             <h3>NHL Stats App</h3>
-                            <ul>
+                            <ul class="skillsUsed">
                                 <li>React</li>
                                 <li>CSS</li>
                                 <li>API</li>
@@ -214,11 +218,11 @@
                     <!-- Project 4 -->
                     <div class="portfolioContainer">
                         <div class="imgContainer">
-                            <a href="https://voting-booth-production.netlify.app/" target="_blank"><img src="./assets/Project3.jpg" alt="link to Find Me A Meal App"></a>
+                            <a href="https://voting-booth-production.netlify.app/" target="_blank"><img src="./assets/project4.jpg" alt="link to Find Me A Meal App"></a>
                         </div>
                         <div class="textContainer">
                             <h3>Voting Booth</h3>
-                            <ul>
+                            <ul class="skillsUsed">
                                 <li>React</li>
                                 <li>React Routing</li>
                                 <li>Firebase Auth</li>
@@ -226,9 +230,13 @@
                                 <li>Git Branching</li>
                                 <li>Group Project</li>
                             </ul>
-                            <p>This web application uses the StatsAPI to allow users to serach for an NHL teams season statistics and their rank in each statistical catagory.</p>
+                            <p>This website allows users to create, share, and save anonymous polls and their results. This website utilizes Firebase and Firebase Authentication. This was a group project completed with 
+                            <a class="partners" href="https://kaitlynwcodes.ca/"> Kaitlyn Wickson</a>, 
+                            <a class="partners" href="https://portfolio.gourlay.me/"> Nick Gourlay</a>, and 
+                            <a class="partners" href="https://paridhishah.dev/">Paridhi Shah</a>.
+                            </p>
                             <div class="linkContainer">
-                                <a href="https://github.com/ConnorRobock/NHL-Stats-App.git">
+                                <a href="https://github.com/VotingBooth/votingBooth.git">
                                         <i class="fa-brands fa-github"></i><span class="sr-only">Voting Booth App Git Hub Link</span>
                                 </a>
                                 <a href="https://voting-booth-production.netlify.app/" target="_blank" class="liveLink">Site Link</a>
@@ -272,9 +280,18 @@
         </footer>
         
     </main>
-    
-</body>
 
-<script src=".scripts.js"> </script>
+<script src="scripts.js"></script>
+<!-- function openNav() {
+    document.getElementById("slideOutMenu").style.width = "250px";
+    console.log("clicked");
+}
+
+function closeNav() {
+    document.getElementById("slideOutMenu").style.width = "0";
+} -->
+
+
+</body>
 
 </html>
