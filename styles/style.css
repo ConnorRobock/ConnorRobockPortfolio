@@ -351,7 +351,7 @@ section p {
 
 .email {
   font-weight: bold;
-  color: #03a696;
+  color: #ffffff;
 }
 
 .tinyText {
@@ -374,6 +374,17 @@ nav {
   background-color: #090b0b;
   z-index: 20;
   height: 10vh;
+}
+nav .logo {
+  display: block;
+}
+nav .flexContainer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav ul {
@@ -398,10 +409,15 @@ nav li a {
 nav li a:hover, nav li a:focus {
   opacity: 80%;
   color: #03a696;
+  text-decoration: underline;
 }
 
 .menuIcon {
   font-size: 2rem;
+  display: none;
+}
+.menuIcon:hover, .menuIcon:focus {
+  color: #03a696;
 }
 
 .slideOutMenu {
@@ -410,7 +426,7 @@ nav li a:hover, nav li a:focus {
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #090b0b;
   overflow-x: hidden;
   padding-top: 60px;
@@ -465,9 +481,6 @@ header div {
           justify-content: right;
 }
 
-.aboutMe {
-  margin-top: 150px;
-}
 .aboutMe .imgContainer, .aboutMe .textContainer {
   width: calc(50% - 50px);
   padding: 25px;
@@ -490,9 +503,6 @@ header div {
           align-items: center;
 }
 
-.skills {
-  margin-top: 150px;
-}
 .skills .flexContainer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -624,20 +634,26 @@ header div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contact .flexContainer .contactContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.contact .flexContainer .contactContainer div, .contact .flexContainer .contactContainer a {
+.contact .flexContainer .contactContainer a, .contact .flexContainer .contactContainer .email {
   width: 33.3333333333%;
   text-align: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.contact .flexContainer .contactContainer div:hover, .contact .flexContainer .contactContainer div:focus, .contact .flexContainer .contactContainer a:hover, .contact .flexContainer .contactContainer a:focus {
+.contact .flexContainer .contactContainer a:hover, .contact .flexContainer .contactContainer a:focus, .contact .flexContainer .contactContainer .email:hover, .contact .flexContainer .contactContainer .email:focus {
   opacity: 80%;
   color: #03a696;
 }
@@ -697,8 +713,11 @@ footer {
   }
 }
 @media (max-width: 860px) {
-  .logo, a {
-    font-size: 1.25rem;
+  nav ul {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
   }
   .contactContainer {
     -webkit-box-orient: vertical;

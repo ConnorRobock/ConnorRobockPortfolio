@@ -45,8 +45,12 @@
 // Queries at 860px
 
 @media (max-width: 860px) {
-    .logo, a{
-        font-size: 1.25rem;
+    nav ul {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
     }
 
     .contactContainer {

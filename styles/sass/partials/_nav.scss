@@ -9,6 +9,13 @@ nav {
     background-color: $dark-bg-color;
     z-index: 20;
     height: 10vh;
+        .logo {
+            display: block;
+        }
+        .flexContainer {
+            justify-content: space-between;
+            align-items: center;
+        }
 }
 
 nav ul {
@@ -28,12 +35,18 @@ nav li a {
     &:focus {
             opacity: 80%;
             color: $dark-theme-color;
+            text-decoration: underline;
         }
 }
 
-// Menu Icon Styles
+// Menu Icon
 .menuIcon {
     font-size: 2rem;
+    display: none;
+        &:hover,
+        &:focus {
+            color: $dark-theme-color;
+        }
 }
 
 // Slide out Nav
@@ -44,7 +57,7 @@ nav li a {
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: $dark-bg-color;
     overflow-x: hidden;
     padding-top: 60px;

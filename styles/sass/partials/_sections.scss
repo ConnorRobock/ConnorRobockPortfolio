@@ -1,8 +1,6 @@
 // About Me Section
 
 .aboutMe {
-    margin-top: 150px;
-
     .imgContainer, .textContainer {
         width: calc( (100% / 2 ) - 50px) ;
         padding: 25px;
@@ -12,8 +10,8 @@
             max-width: 600px;
             max-height: 600px;
         }
-        
         }
+
     .textContainer {
         display: flex;
         flex-direction: column;
@@ -24,8 +22,6 @@
 // Skills Section
 
 .skills {
-    margin-top: 150px;
-
     .flexContainer {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -149,12 +145,13 @@
 
     .flexContainer {
         flex-direction: column;
-
+        justify-content: center;
         .contactContainer {
             display: flex;
             margin-top: 25px;
+            align-items: center;
 
-            div, a {
+            a, .email {
                 width: calc( 100% / 3 );
                 text-align: center;
                 transition: 0.3s;
