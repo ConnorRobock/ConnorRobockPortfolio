@@ -278,6 +278,17 @@ ul {
   margin-top: 100px;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: 1rem;
+  color: #03a696;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   color: #ffffff;
   font-size: 125%;
@@ -340,7 +351,7 @@ section p {
 
 .email {
   font-weight: bold;
-  color: #03a696;
+  color: #ffffff;
 }
 
 .tinyText {
@@ -362,9 +373,21 @@ nav {
   top: 0;
   background-color: #090b0b;
   z-index: 20;
+  height: 10vh;
+}
+nav .logo {
+  display: block;
+}
+nav .flexContainer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-nav, ul {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,7 +398,7 @@ nav, ul {
       align-content: center;
   text-align: center;
 }
-nav li, ul li {
+nav ul li {
   margin: 0 25px 0 25px;
 }
 
@@ -386,6 +409,49 @@ nav li a {
 nav li a:hover, nav li a:focus {
   opacity: 80%;
   color: #03a696;
+  text-decoration: underline;
+}
+
+.menuIcon {
+  font-size: 2rem;
+  display: none;
+}
+.menuIcon:hover, .menuIcon:focus {
+  color: #03a696;
+}
+
+.slideOutMenu {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #090b0b;
+  overflow-x: hidden;
+  padding-top: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.slideOutMenu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.slideOutMenu a:hover, .slideOutMenu a:focus {
+  color: #03a696;
+}
+
+.slideOutMenu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 2rem;
+  margin-left: 50px;
 }
 
 header {
@@ -415,9 +481,6 @@ header div {
           justify-content: right;
 }
 
-.aboutMe {
-  margin-top: 150px;
-}
 .aboutMe .imgContainer, .aboutMe .textContainer {
   width: calc(50% - 50px);
   padding: 25px;
@@ -427,10 +490,19 @@ header div {
   max-width: 600px;
   max-height: 600px;
 }
-
-.skills {
-  margin-top: 150px;
+.aboutMe .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .skills .flexContainer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -476,23 +548,65 @@ header div {
 .portfolio .imgContainer p, .portfolio .textContainer p {
   margin: 0;
 }
+.portfolio .imgContainer img, .portfolio .textContainer img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 350px;
+}
 .portfolio .textContainer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.portfolio .skillsUsed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.portfolio .skillsUsed li {
+  padding: 10px 20px 0 0;
+  font-weight: bold;
+}
+.portfolio .partners {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.portfolio .partners:hover, .portfolio .partners:focus {
+  color: #03a696;
+}
 .portfolio .linkContainer {
-  padding: 25px;
+  padding: 25px 25px 0 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .portfolio .linkContainer a {
-  margin: 25px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .portfolio .linkContainer a:hover, .portfolio .linkContainer a:focus {
   color: #03a696;
   opacity: 80%;
+}
+.portfolio .linkContainer a i {
+  font-size: 2rem;
+  margin-right: 25px;
 }
 .portfolio .linkContainer .liveLink {
   border: 2px solid #03a696;
@@ -520,20 +634,26 @@ header div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contact .flexContainer .contactContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.contact .flexContainer .contactContainer div, .contact .flexContainer .contactContainer a {
+.contact .flexContainer .contactContainer a, .contact .flexContainer .contactContainer .email {
   width: 33.3333333333%;
   text-align: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.contact .flexContainer .contactContainer div:hover, .contact .flexContainer .contactContainer div:focus, .contact .flexContainer .contactContainer a:hover, .contact .flexContainer .contactContainer a:focus {
+.contact .flexContainer .contactContainer a:hover, .contact .flexContainer .contactContainer a:focus, .contact .flexContainer .contactContainer .email:hover, .contact .flexContainer .contactContainer .email:focus {
   opacity: 80%;
   color: #03a696;
 }
@@ -593,8 +713,11 @@ footer {
   }
 }
 @media (max-width: 860px) {
-  .logo, a {
-    font-size: 1.25rem;
+  nav ul {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
   }
   .contactContainer {
     -webkit-box-orient: vertical;

@@ -55,14 +55,16 @@ section p {
     font-size: 1rem;
 }
 
-.contact p {
-    font-size: 1.25rem;
-    width: 100%;
+.contact {
+        p {
+        font-size: 1.25rem;
+        width: 100%;
+    }
 }
 
 .email {
     font-weight: bold;
-    color: $dark-theme-color;
+    color: $dark-primary-color;
 }
 
 .tinyText {

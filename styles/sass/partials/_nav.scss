@@ -8,9 +8,17 @@ nav {
     top: 0;
     background-color: $dark-bg-color;
     z-index: 20;
+    height: 10vh;
+        .logo {
+            display: block;
+        }
+        .flexContainer {
+            justify-content: space-between;
+            align-items: center;
+        }
 }
 
-nav, ul {
+nav ul {
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -21,42 +29,58 @@ nav, ul {
     }
 }
 
-// nav p {
-//     margin: 0 auto;
-// }
-
 nav li a {
     transition: 0.3s;
     &:hover,
     &:focus {
             opacity: 80%;
             color: $dark-theme-color;
+            text-decoration: underline;
         }
 }
 
-// .slideOutMenu {
-//     background-color: $dark-bg-color;
-//     position: relative;
-//     overflow: hidden;
-//     display: flex;
-//     flex-direction: column;
+// Menu Icon
+.menuIcon {
+    font-size: 2rem;
+    display: none;
+        &:hover,
+        &:focus {
+            color: $dark-theme-color;
+        }
+}
 
-//         li {
-//             margin: 20px;
-//         }  
-// }
+// Slide out Nav
 
-// .menuIcon {
-//     position: absolute;
-//     margin: 15px;
-//     left: 0;
-//     top: 0;
-//     transition: 0.3s;
-//         &:hover, &:focus {
-//             color: $dark-theme-color;
-//         }
-// }
+.slideOutMenu {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: $dark-bg-color;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+        a {
+           padding: 8px 8px 8px 32px;
+           text-decoration: none;    
+           font-size: 1.5rem;
+           color: $dark-primary-color;
+           display: block;
+           transition: 0.3s;
+                &:hover,
+                &:focus {
+                    color: $dark-theme-color;
+                }
+        }
+}
 
-// .menuIcon, .slideOutMenu{
-//     display: none;
-// }
+.slideOutMenu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2rem;
+    margin-left: 50px;
+}
+

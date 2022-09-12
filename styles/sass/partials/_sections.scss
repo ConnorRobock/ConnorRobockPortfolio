@@ -1,8 +1,6 @@
 // About Me Section
 
 .aboutMe {
-    margin-top: 150px;
-
     .imgContainer, .textContainer {
         width: calc( (100% / 2 ) - 50px) ;
         padding: 25px;
@@ -12,16 +10,18 @@
             max-width: 600px;
             max-height: 600px;
         }
-        
         }
 
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 // Skills Section
 
 .skills {
-    margin-top: 150px;
-
     .flexContainer {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -63,21 +63,56 @@
         p {
             margin: 0;
         }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            min-height: 350px;
+        }
     }
 
     .textContainer {
         flex-direction: column;
     }
 
+    .skillsUsed {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+            li {
+                padding: 10px 20px 0 0;
+                font-weight: bold;   
+            }
+    }
+
+    .partners {
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        font-weight: 400;
+        transition: 0.3s;
+            &:hover,
+            &:focus {
+                color: $dark-theme-color;
+            }
+    }
+
     .linkContainer {
-        padding: 25px;
+        padding: 25px 25px 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
             a {
-                margin: 25px;
                 transition: 0.3s;
                     &:hover, &:focus {
                         color: $dark-theme-color;
                         opacity: 80%;
                     }
+                i {
+                   font-size: 2rem; 
+                   margin-right: 25px;
+                }
             }
     }
 
@@ -110,12 +145,13 @@
 
     .flexContainer {
         flex-direction: column;
-
+        justify-content: center;
         .contactContainer {
             display: flex;
             margin-top: 25px;
+            align-items: center;
 
-            div, a {
+            a, .email {
                 width: calc( 100% / 3 );
                 text-align: center;
                 transition: 0.3s;
