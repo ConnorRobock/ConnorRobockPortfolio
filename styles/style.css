@@ -648,6 +648,12 @@ header div {
           align-items: center;
 }
 .contact .flexContainer .contactContainer a, .contact .flexContainer .contactContainer .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 33.3333333333%;
   text-align: center;
   -webkit-transition: 0.3s;
@@ -751,18 +757,13 @@ footer {
             flex-direction: column;
     width: 33.3333333333%;
   }
-}
-@media (max-width: 425px) {
-  .linkContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .aboutMe,
+.skills,
+.portfolio,
+.contact {
+    margin-top: 75px;
+  }
+  nav {
+    height: 5vh;
   }
 }
