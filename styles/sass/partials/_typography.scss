@@ -18,6 +18,9 @@ h1, h2, h3, a, .logo {
 
 h1 {
     font-size: 3rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: yellow;
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -42,7 +45,7 @@ span {
 }
 
 .name {
-    color: $dark-theme-color;
+    font-size: 3.5rem;
 }
 
 h2 {

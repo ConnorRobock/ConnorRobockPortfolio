@@ -1,0 +1,78 @@
+// styles for shooting start background
+
+$n: 15; //number of streaking stars
+$s: 300; //number of stars stationary in bottom right corner of header
+
+header {
+    height: 100vh;
+    overflow: hidden;
+    // background-image: radial-gradient(ellipse at top, #080e21 50%, #1b2735 95%);
+}
+
+$shadow: (
+);
+
+@for $i from 1 through $s {
+    $x: random(1920);
+    $y: random(1000);
+    $shadow: $shadow,
+    ($x+px $y+px rgb(255, 232, 31)) !global;
+}
+
+.star {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadow;
+}
+
+@for $i from 1 through $n {
+    $v: random(100)+9; 
+    $h: random(250)+50; // how quickly stars cross page
+    $d: random(70)/10+3; // (how quickly initial stars cross page)/
+
+    .meteor-#{$i} {
+        position: absolute;
+        top: $h + px;
+        left: $v*1%;
+        width: 350px; //length of streaks
+        height: 3px; //sets the width of the streaking stars
+        transform: rotate(-50deg);
+        background-image: linear-gradient(to right, rgb(255, 232, 31), rgba(255, 255, 255, 0)); //changes color of streaking stars
+        animation: meteor $d+s linear infinite;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(rgb(255, 255, 255), .7);
+            box-shadow: 0 0 15px 3px rgb(255, 255, 255);
+        }
+
+    }
+}
+
+@keyframes meteor {
+    0% {
+        opacity: 1;
+        margin-top: -300px;
+        margin-right: -300px;
+    }
+
+    12% {
+        opacity: 0;
+    }
+
+    15% {
+        margin-top: 300px;
+        margin-left: -600px;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
