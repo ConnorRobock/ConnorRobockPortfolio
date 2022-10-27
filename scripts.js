@@ -7,3 +7,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("slideOutMenu").style.width = "0";
 }
+
+// JS for animations on scroll
+

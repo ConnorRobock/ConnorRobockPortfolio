@@ -1,14 +1,18 @@
 header {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    background-repeat: none;
-    background-size: cover;
-    background-position: center;
 }
 
-header div {
+// header div 
+.titleContainer {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nameTitle{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: right;
 }
