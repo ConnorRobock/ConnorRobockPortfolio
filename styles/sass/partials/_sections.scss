@@ -125,13 +125,13 @@
 }
 
 .portfolio img {
-    border: 5px solid $dark-primary-color;
+    border: 5px solid $dark-theme-color;
     border-radius: 5px;
     transition: 0.3s;
         &:hover,
         &:focus {
             opacity: 80%;
-            border: 10px solid $dark-theme-color;
+            border: $dark-primary-color;
         }
 }
 

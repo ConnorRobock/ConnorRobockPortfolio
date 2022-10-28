@@ -10,6 +10,7 @@ nav {
     height: 10vh;
         .logo {
             display: block;
+            
         }
         .flexContainer {
             justify-content: space-between;
@@ -33,7 +34,7 @@ nav li a {
     &:hover,
     &:focus {
             opacity: 80%;
-            color: $dark-theme-color;
+            color: $dark-primary-color;
             text-decoration: underline;
         }
 }
@@ -41,10 +42,11 @@ nav li a {
 // Menu Icon
 .menuIcon {
     font-size: 2rem;
+    color: $dark-theme-color;
     display: none;
         &:hover,
         &:focus {
-            color: $dark-theme-color;
+            color: $dark-primary-color;
         }
 }
 
@@ -65,7 +67,7 @@ nav li a {
            padding: 8px 8px 8px 32px;
            text-decoration: none;    
            font-size: 1.5rem;
-           color: $dark-primary-color;
+           color: $dark-theme-color;
            display: block;
            transition: 0.3s;
                 &:hover,
